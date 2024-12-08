@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio-Personal Blog</title>
+    <link href="./output.css" rel="stylesheet">
+</head>
+      <!-- whole body section start from here  -->
+<body class="bg-gradient-to-r from-regal-blue via-purple-300 to-slate-100">
+    <header id="#Home" class="fixed w-full z-10">
+
+        <!-- navbar section  -->
+        <nav class="bg-white px-4  drop-shadow-2xl shadow-black lg:px-6 py-2.5 dark:bg-gray-800">
+            <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+                <a href="#Home" class="flex items-center animate-pulse">
+                    <img src="/src/Images/logo.png" class="mr-3 h-8 rounded-full sm:h-10" alt="Logo img" />
+                    <span class="self-center text-sm sm:text-xl font-semibold whitespace-nowrap dark:text-white">CodewithDG</span>
+                </a>
+
+                <!-- toggle button  -->
+                <div class="flex gap-1 items-center lg:order-2">   
+                                <svg class="" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="fill-slate-300" d="M7 0h2v2H7zM12.88 1.637l1.414 1.415-1.415 1.413-1.413-1.414zM14 7h2v2h-2zM12.95 14.433l-1.414-1.413 1.413-1.415 1.415 1.414zM7 14h2v2H7zM2.98 14.364l-1.413-1.415 1.414-1.414 1.414 1.415zM0 7h2v2H0zM3.05 1.706 4.463 3.12 3.05 4.535 1.636 3.12z" />
+                                    <path class="fill-slate-400" d="M8 4C5.8 4 4 5.8 4 8s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4Z" />
+                                </svg>
+                                <label class="relative inline-flex items-center cursor-pointer">
+                                    <input type="checkbox" value="" class="sr-only peer">
+                                    <div class="w-9 h-5 bg-gray-200 hover:bg-gray-300 peer-focus:outline-0 peer-focus:ring-transparent rounded-full peer transition-all ease-in-out duration-500 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-gray-600 hover:peer-checked:bg-gray-700"></div>
+                                    </label>
+                                <svg class=" dark:block" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="fill-slate-400" d="M6.2 1C3.2 1.8 1 4.6 1 7.9 1 11.8 4.2 15 8.1 15c3.3 0 6-2.2 6.9-5.2C9.7 11.2 4.8 6.3 6.2 1Z" />
+                                    <path class="fill-slate-500" d="M12.5 5a.625.625 0 0 1-.625-.625 1.252 1.252 0 0 0-1.25-1.25.625.625 0 1 1 0-1.25 1.252 1.252 0 0 0 1.25-1.25.625.625 0 1 1 1.25 0c.001.69.56 1.249 1.25 1.25a.625.625 0 1 1 0 1.25c-.69.001-1.249.56-1.25 1.25A.625.625 0 0 1 12.5 5Z" />
+                                </svg>
+                               
+                    <!-- Menu Button  -->
+                    <button data-collapse-toggle="mobile-menu-2" type="button"
+                        class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                        aria-controls="mobile-menu-2" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
+                    <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+                        <li>
+                            <a href="#Home"
+                                class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-gray-900 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Home</a>
+                        </li>
+                        <li>
+                            <a href="#About"
+                                class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-gray-900 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">About
+                                Me</a>
+                        </li>
+                        <li>
+                            <a href="#Projects"
+                                class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-gray-900 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Projects</a>
+                        </li>
+                        <li>
+                            <a href="#Skills"
+                                class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-gray-900 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Skills</a>
+                        </li>
+                        <li>
+                            <a href="#Service"
+                                class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-gray-900 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Service</a>
+                        </li>
+                        <li>
+                            <a href="#Contact"
+                                class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-gray-900 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="bg-gradient-to-r from-regal-blue">
+
+        <!-- Home page Section  -->
+        <section id="Home" class=" dark:bg-gray-900 h-full md:h-screen pt-10 md:pt-32">
+            <div class="grid max-w-screen-xl px-4 py-9  mx-auto lg:gap-8 xl:gap-0 lg:py-1 lg:grid-cols-12">
+                <div class="mr-auto place-self-center lg:col-span-7 animate-[ping_3.5s_ease-in]">
+                    <h1
+                        class=" max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">
+                        Hello, I am Dipak Ghige</h1>
+                    <p
+                        class="max-w-2xl mb-6 font-normal text-gray-500 lg:mb-14 md:text-lg lg:text-xl dark:text-gray-400">
+                        I specialize in crafting seamless, visually appealing interfaces that captivate users and
+                        elevate digital experiences. My goal is to master the art of frontend development, constantly
+                        honing my skills in HTML, CSS, JavaScript, and various frameworks to bring ideas to life.</p>
+                    <a href="#Contact"
+                        class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center ring-orange-50 text-gray-900 dark:text-white rounded-lg bg-primary-700 hover:text-gray-700 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
+                        Hire Me
+                        <svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                    <a href="./Images/Dipak_Ghige_pdf.pdf"
+                        class="bg-gradient-to-r from-pink-200 via-regal-blue to-purple-300 inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-900 rounded-lg hover:bg-gray-100 hover:border-transparent focus:ring-4 focus:ring-gray-100 dark:text-gray-800 dark:border-gray-700 dark:hover:text-white dark:focus:ring-gray-800">
+                        Download CV
+                    </a>
+                </div>
+                <div class="hidden lg:mt-16 lg:col-span-5 lg:flex">
+                    <img class="dark:rounded-xl animate-[bounce_2.5s_ease-in-out_infinite]"
+                        src="https://cdn3d.iconscout.com/3d/premium/thumb/desenvolvimento-de-site-5984576-4971246.png"
+                        alt="mockup">
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Project Section  -->
+        <section id="Projects" class="bg-gray-50 dark:bg-gray-900 ">
+            <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 ">
+                <div class="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
+                    <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Projects</h2>
+                    <p class="font-light text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400">Explore the collection of
+                        my web pages and websites to showcase my skills and experiance.</p>
+                </div>
+                <div class="grid gap-8 sm:items-stretch mb-6 lg:mb-16 md:grid-cols-2">
+
+                    <!-- Project-1 Travel Blog -->
+                    <div class="items-center bg-slate-200 rounded-lg shadow-2xl transition-all hover:scale-105 sm:flex dark:bg-gray-800 dark:border-gray-700">
+                        <a href="https://codewith-dg.github.io/Travel-Blog/" target="_blank">
+                            <img class="w-full rounded-lg sm:rounded-none sm:rounded-l-lg  "
+                                src="https://img.freepik.com/premium-vector/3d-laptop-vector-illustration-3d-style-laptop_238404-1273.jpg"
+                                alt="project">
+                        </a>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <a href="#">Travel Blog</a>
+                            </h3>
+                            <span class="text-gray-500 dark:text-gray-400">Front-End Developer</span>
+                            <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">A comprehensive travel
+                                website offering a seamless user experience with features.</p>
+                            <ul class="flex space-x-4 sm:mt-0">
+                                <li>
+                                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="m3 2 1.578 17.824L12 22l7.467-2.175L21 2H3Zm14.049 6.048H9.075l.172 2.016h7.697l-.626 6.565-4.246 1.381-4.281-1.455-.288-2.932h2.024l.16 1.411 2.4.815 2.346-.763.297-3.005H7.416l-.562-6.05h10.412l-.217 2.017Z" />
+                                    </svg>
+                                </li>
+                                <li>
+                                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="m3 2 1.578 17.834L12 22l7.468-2.165L21 2H3Zm13.3 14.722-4.293 1.204H12l-4.297-1.204-.297-3.167h2.108l.15 1.526 2.335.639 2.34-.64.245-3.05h-7.27l-.187-2.006h7.64l.174-2.006H6.924l-.176-2.006h10.506l-.954 10.71Z" />
+                                    </svg>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Project-2 Portfolio -->
+                    <div class="items-center bg-slate-200 rounded-lg shadow-2xl transition-all hover:scale-105 sm:flex dark:bg-gray-800 dark:border-gray-700">
+                        <a href="https://codewith-dg.github.io/Personal-Blog/" target="_blank">
+                            <img class="w-full rounded-lg sm:rounded-none sm:rounded-l-lg "
+                                src="https://img.freepik.com/premium-vector/3d-laptop-vector-illustration-3d-style-laptop_238404-1273.jpg"
+                                alt="project">
+                        </a>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <a href="#">Portfolio</a>
+                            </h3>
+                        
+                            <span class="text-gray-500 dark:text-gray-400"> Front-End Developer </span>
+                            <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">Your gateway to my work,
+                                Explore my projects, skills, in one convenient place. </p>
+                            <ul class="flex space-x-4 sm:mt-0">
+
+                                <li>
+                                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="m3 2 1.578 17.824L12 22l7.467-2.175L21 2H3Zm14.049 6.048H9.075l.172 2.016h7.697l-.626 6.565-4.246 1.381-4.281-1.455-.288-2.932h2.024l.16 1.411 2.4.815 2.346-.763.297-3.005H7.416l-.562-6.05h10.412l-.217 2.017Z" />
+                                    </svg>
+                                </li>
+                                <li>
+                                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="m3 2 1.578 17.834L12 22l7.468-2.165L21 2H3Zm13.3 14.722-4.293 1.204H12l-4.297-1.204-.297-3.167h2.108l.15 1.526 2.335.639 2.34-.64.245-3.05h-7.27l-.187-2.006h7.64l.174-2.006H6.924l-.176-2.006h10.506l-.954 10.71Z" />
+                                    </svg>
+
+                                </li>
+                                <li>
+                                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="M11.782 5.72a4.773 4.773 0 0 0-4.8 4.173 3.43 3.43 0 0 1 2.741-1.687c1.689 0 2.974 1.972 3.758 2.587a5.733 5.733 0 0 0 5.382.935c2-.638 2.934-2.865 3.137-3.921-.969 1.379-2.44 2.207-4.259 1.231-1.253-.673-2.19-3.438-5.959-3.318ZM6.8 11.979A4.772 4.772 0 0 0 2 16.151a3.431 3.431 0 0 1 2.745-1.687c1.689 0 2.974 1.972 3.758 2.587a5.733 5.733 0 0 0 5.382.935c2-.638 2.933-2.865 3.137-3.921-.97 1.379-2.44 2.208-4.259 1.231-1.253-.673-2.19-3.443-5.963-3.317Z" />
+                                    </svg>
+
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Project-3 Avengers -->
+                    <div class="items-center bg-slate-200 rounded-lg shadow-2xl transition-all hover:scale-105 sm:flex dark:bg-gray-800 dark:border-gray-700">
+                        <a href="#">
+                            <img class="w-full rounded-lg sm:rounded-none sm:rounded-l-lg "
+                                src="https://img.freepik.com/premium-vector/3d-laptop-vector-illustration-3d-style-laptop_238404-1273.jpg"
+                                alt="project">
+                        </a>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <a href="#">Avengers</a>
+                            </h3>
+                            <span class="text-gray-500 dark:text-gray-400"> Front-End Developer </span>
+                            <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">Your gateway to my work,
+                                Explore my projects, skills in one convenient place.</p>
+                            <ul class="flex space-x-4 sm:mt-0">
+                                <li>
+                                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="m3 2 1.578 17.824L12 22l7.467-2.175L21 2H3Zm14.049 6.048H9.075l.172 2.016h7.697l-.626 6.565-4.246 1.381-4.281-1.455-.288-2.932h2.024l.16 1.411 2.4.815 2.346-.763.297-3.005H7.416l-.562-6.05h10.412l-.217 2.017Z" />
+                                    </svg>
+                                </li>
+                                <li>
+                                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="m3 2 1.578 17.834L12 22l7.468-2.165L21 2H3Zm13.3 14.722-4.293 1.204H12l-4.297-1.204-.297-3.167h2.108l.15 1.526 2.335.639 2.34-.64.245-3.05h-7.27l-.187-2.006h7.64l.174-2.006H6.924l-.176-2.006h10.506l-.954 10.71Z" />
+                                    </svg>
+                                </li>
+                                <li>
+                                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                        viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="m8 8-4 4 4 4m8 0 4-4-4-4m-2-3-4 14" />
+                                    </svg>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Project-4 Upcoming -->
+                    <div class="items-center bg-slate-200 rounded-lg shadow-2xl transition-all hover:scale-105 sm:flex dark:bg-gray-800 dark:border-gray-700">
+                        <a href="#">
+                            <img class="w-full rounded-lg sm:rounded-none sm:rounded-l-lg "
+                                src="https://img.freepik.com/premium-vector/3d-laptop-vector-illustration-3d-style-laptop_238404-1273.jpg">
+                        </a>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <a href="#">Up Coming...</a>
+                            </h3>
+                            <span class="text-gray-500 dark:text-gray-400">Js and React</span>
+                            <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">More interactive and
+                                dynamics projects with javascript,React an other language.</p>
+                            <ul class="flex space-x-4 sm:mt-0">
+                                <li>
+                                    <svg legend="CSS" class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="m3 2 1.578 17.834L12 22l7.468-2.165L21 2H3Zm13.3 14.722-4.293 1.204H12l-4.297-1.204-.297-3.167h2.108l.15 1.526 2.335.639 2.34-.64.245-3.05h-7.27l-.187-2.006h7.64l.174-2.006H6.924l-.176-2.006h10.506l-.954 10.71Z" />
+                                    </svg>
+                                </li>
+                                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="m3 2 1.578 17.824L12 22l7.467-2.175L21 2H3Zm14.049 6.048H9.075l.172 2.016h7.697l-.626 6.565-4.246 1.381-4.281-1.455-.288-2.932h2.024l.16 1.411 2.4.815 2.346-.763.297-3.005H7.416l-.562-6.05h10.412l-.217 2.017Z" />
+                                </svg>
+                                <li>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                     <!-- Project-5 Upcoming -->
+                     <div class="items-center bg-slate-200 rounded-lg shadow-2xl transition-all hover:scale-105 sm:flex dark:bg-gray-800 dark:border-gray-700">
+                        <a href="#">
+                            <img class="w-full rounded-lg sm:rounded-none sm:rounded-l-lg "
+                                src="https://img.freepik.com/premium-vector/3d-laptop-vector-illustration-3d-style-laptop_238404-1273.jpg">
+                        </a>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <a href="#">Up Coming...</a>
+                            </h3>
+                            <span class="text-gray-500 dark:text-gray-400">Js and React</span>
+                            <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">More interactive and
+                                dynamics projects with javascript,React an other language.</p>
+                            <ul class="flex space-x-4 sm:mt-0">
+                                <li>
+                                    <svg legend="CSS" class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="m3 2 1.578 17.834L12 22l7.468-2.165L21 2H3Zm13.3 14.722-4.293 1.204H12l-4.297-1.204-.297-3.167h2.108l.15 1.526 2.335.639 2.34-.64.245-3.05h-7.27l-.187-2.006h7.64l.174-2.006H6.924l-.176-2.006h10.506l-.954 10.71Z" />
+                                    </svg>
+                                </li>
+                                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="m3 2 1.578 17.824L12 22l7.467-2.175L21 2H3Zm14.049 6.048H9.075l.172 2.016h7.697l-.626 6.565-4.246 1.381-4.281-1.455-.288-2.932h2.024l.16 1.411 2.4.815 2.346-.763.297-3.005H7.416l-.562-6.05h10.412l-.217 2.017Z" />
+                                </svg>
+                                <li>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                     <!-- Project-6 Upcoming -->
+                     <div class="items-center bg-slate-200 rounded-lg shadow-2xl transition-all hover:scale-105 sm:flex dark:bg-gray-800 dark:border-gray-700">
+                        <a href="#">
+                            <img class="w-full rounded-lg sm:rounded-none sm:rounded-l-lg "
+                                src="https://img.freepik.com/premium-vector/3d-laptop-vector-illustration-3d-style-laptop_238404-1273.jpg">
+                        </a>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <a href="#">Up Coming...</a>
+                            </h3>
+                            <span class="text-gray-500 dark:text-gray-400">Js and React</span>
+                            <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">More interactive and
+                                dynamics projects with javascript,React an other language.</p>
+                            <ul class="flex space-x-4 sm:mt-0">
+                                <li>
+                                    <svg legend="CSS" class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="m3 2 1.578 17.834L12 22l7.468-2.165L21 2H3Zm13.3 14.722-4.293 1.204H12l-4.297-1.204-.297-3.167h2.108l.15 1.526 2.335.639 2.34-.64.245-3.05h-7.27l-.187-2.006h7.64l.174-2.006H6.924l-.176-2.006h10.506l-.954 10.71Z" />
+                                    </svg>
+                                </li>
+                                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="m3 2 1.578 17.824L12 22l7.467-2.175L21 2H3Zm14.049 6.048H9.075l.172 2.016h7.697l-.626 6.565-4.246 1.381-4.281-1.455-.288-2.932h2.024l.16 1.411 2.4.815 2.346-.763.297-3.005H7.416l-.562-6.05h10.412l-.217 2.017Z" />
+                                </svg>
+                                <li>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                     <!-- Project-7 Upcoming -->
+                     <div class="items-center bg-slate-200 rounded-lg shadow-2xl transition-all hover:scale-105 sm:flex dark:bg-gray-800 dark:border-gray-700">
+                        <a href="#">
+                            <img class="w-full rounded-lg sm:rounded-none sm:rounded-l-lg "
+                                src="https://img.freepik.com/premium-vector/3d-laptop-vector-illustration-3d-style-laptop_238404-1273.jpg">
+                        </a>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <a href="#">Up Coming...</a>
+                            </h3>
+                            <span class="text-gray-500 dark:text-gray-400">Js and React</span>
+                            <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">More interactive and
+                                dynamics projects with javascript,React an other language.</p>
+                            <ul class="flex space-x-4 sm:mt-0">
+                                <li>
+                                    <svg legend="CSS" class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="m3 2 1.578 17.834L12 22l7.468-2.165L21 2H3Zm13.3 14.722-4.293 1.204H12l-4.297-1.204-.297-3.167h2.108l.15 1.526 2.335.639 2.34-.64.245-3.05h-7.27l-.187-2.006h7.64l.174-2.006H6.924l-.176-2.006h10.506l-.954 10.71Z" />
+                                    </svg>
+                                </li>
+                                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="m3 2 1.578 17.824L12 22l7.467-2.175L21 2H3Zm14.049 6.048H9.075l.172 2.016h7.697l-.626 6.565-4.246 1.381-4.281-1.455-.288-2.932h2.024l.16 1.411 2.4.815 2.346-.763.297-3.005H7.416l-.562-6.05h10.412l-.217 2.017Z" />
+                                </svg>
+                                <li>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                     <!-- Project-8 Upcoming -->
+                     <div class="items-center bg-slate-200 rounded-lg shadow-2xl transition-all hover:scale-105 sm:flex dark:bg-gray-800 dark:border-gray-700">
+                        <a href="#">
+                            <img class="w-full rounded-lg sm:rounded-none sm:rounded-l-lg "
+                                src="https://img.freepik.com/premium-vector/3d-laptop-vector-illustration-3d-style-laptop_238404-1273.jpg">
+                        </a>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <a href="#">Up Coming...</a>
+                            </h3>
+                            <span class="text-gray-500 dark:text-gray-400">Js and React</span>
+                            <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">More interactive and
+                                dynamics projects with javascript,React an other language.</p>
+                            <ul class="flex space-x-4 sm:mt-0">
+                                <li>
+                                    <svg legend="CSS" class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="m3 2 1.578 17.834L12 22l7.468-2.165L21 2H3Zm13.3 14.722-4.293 1.204H12l-4.297-1.204-.297-3.167h2.108l.15 1.526 2.335.639 2.34-.64.245-3.05h-7.27l-.187-2.006h7.64l.174-2.006H6.924l-.176-2.006h10.506l-.954 10.71Z" />
+                                    </svg>
+                                </li>
+                                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="m3 2 1.578 17.824L12 22l7.467-2.175L21 2H3Zm14.049 6.048H9.075l.172 2.016h7.697l-.626 6.565-4.246 1.381-4.281-1.455-.288-2.932h2.024l.16 1.411 2.4.815 2.346-.763.297-3.005H7.416l-.562-6.05h10.412l-.217 2.017Z" />
+                                </svg>
+                                <li>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- About section  -->
+        <section id="About" class=" dark:bg-gray-900">
+            <div class="text-center pt-3 md:pt-11 ">
+                <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">About Me</h2>
+            </div>
+
+            <div
+                class="gap-8 justify-items-center items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
+                <img class="w-4/5 shadow-2xl transition-all hover:scale-105 rounded-lg lg:w-3/4" src="./Images/DG.jpg"
+                    alt="Profile Image">
+                <div class="mt-4 md:mt-0">
+                    <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Thanks For
+                        Looking!</h2>
+                    <p class="first-letter:text-6xl mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">Hi, I'm
+                        Dipak Ghige, a
+                        passionate frontend developer with a keen eye for detail and a love for creating seamless,
+                        user-friendly web experiences. Based in Bhiwandi (Thane), I specialize in transforming complex
+                        ideas into elegant and efficient designs.</p>
+                    <p class="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400"> With a degree in Bachelore's
+                        in Computer Scinces from Mumbai University, I have over 1 years of experience in the tech
+                        industry. Throughout my career, I've had the pleasure of working with diverse teams at
+                        Safexpress pvt. ltd. where I've honed my skills in HTML, CSS, JavaScript, and modern frameworks
+                        like Tailwind css and React.js. </p>
+                    <a href="#Home"
+                        class="inline-flex items-center px-2 text-gray-900 bg-primary-700 hover:text-slate-600 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm py-2.5 text-center dark:text-white dark:focus:ring-primary-900">
+                        Read More
+                        <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Certifications page -->
+            <div class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
+                <div class="mt-4 md:mt-0">
+                    <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Certifications
+                    </h2>
+                    <p class="first-letter:text-6xl mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">A
+                        little progress each day
+                        adds up to big results! I am glad to share that I have successfully completed Full Stack
+                        Development: Let's begin course from Internshala Trainings. Check out my certificate here! </p>
+                    <a href="https://trainings.internshala.com/s/v/3487867/820dd907"
+                        class="inline-flex items-start text-gray-900 bg-primary-700 hover:text-slate-600 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-2 py-2.5 text-center dark:text-white dark:focus:ring-primary-900">
+                        Get Details
+                        <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                </div>
+                <a href="https://trainings.internshala.com/s/v/3487867/820dd907"><img
+                        class="w-full shadow-2xl transition-all hover:scale-105 rounded-lg"
+                        src="./Images/certificate.png" alt="certificate image"></a>
+            </div>
+        </section>
+
+        <!-- Service section  -->
+        <section id="Service" class="dark:bg-gray-900 bg-slate-100">
+            <div class="relative overflow-hidden">
+                <div class="pb-80 pt-16 sm:pb-40 sm:pt-24 lg:pb-48 lg:pt-20">
+                    <div class="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
+                        <div class="sm:max-w-lg">
+                            <h1 class="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-6xl">
+                                Service And Expertise</h1>
+                            <p class="mt-8 text-xl text-gray-500">
+                            <ul class="list-disc space-y-3 px-3 dark:text-white">
+                                <li class="text-pretty">Proficient in HTML, CSS, JavaScript, and modern frameworks like
+                                    Bootstrap, Tailwind, React,</li>
+                                <li>Responsive web design for optimal viewing across devices.</li>
+                                <li>Ensuring cross-browser compatibility and performance optimization.</li>
+                            </ul>
+                            </p>
+                        </div>
+                        <div>
+                            <div class="mt-10">
+                                <!-- Skills image grid -->
+                                <div aria-hidden="true"
+                                    class="pointer-events-none lg:absolute lg:inset-y-0 lg:mx-auto lg:w-full lg:max-w-7xl animate-[spin_2.5s_ease-in-out]">
+                                    <div
+                                        class="absolute transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8">
+                                        <div class="flex items-center pt-4 space-x-6 lg:space-x-8 transition-transform">
+                                            <div class="grid shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                                                <div class="h-20 w-20 overflow-hidden rounded-lg ">
+                                                    <img src="https://cdn3d.iconscout.com/3d/free/thumb/free-html-3d-icon-download-in-png-blend-fbx-gltf-file-formats--logo-interface-website-isolated-programming-language-pack-logos-icons-5453024.png?f=webp"
+                                                        alt="HTML" class="size-full object-cover">
+                                                </div>
+                                                <div class="h-20 w-20 overflow-hidden rounded-lg">
+                                                    <img class=""
+                                                        src="https://cdn3d.iconscout.com/3d/free/thumb/free-css-3d-icon-download-in-png-blend-fbx-gltf-file-formats--logo-interface-website-isolated-programming-language-pack-logos-icons-5453030.png?f=webp"
+                                                        alt="CSS" class="size-full object-cover">
+                                                </div>
+                                            </div>
+                                            <div class="grid shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                                                <div class="h-20 w-20 overflow-hidden rounded-lg">
+                                                    <img src="https://static.vecteezy.com/system/resources/previews/012/697/298/non_2x/3d-javascript-logo-design-free-png.png"
+                                                        alt="JavaScript" class="size-full object-cover">
+                                                </div>
+                                                <div class="h-20 w-20 overflow-hidden rounded-lg">
+                                                    <img src="https://cdn3d.iconscout.com/3d/free/thumb/free-react-native-3d-logo-download-in-png-blend-fbx-gltf-file-formats--software-social-media-pack-logos-4642743.png?f=webp"
+                                                        alt="React" class="size-full object-cover">
+                                                </div>
+                                                <div class="h-20 w-20 overflow-hidden rounded-lg">
+                                                    <img src="https://cdn3d.iconscout.com/3d/free/thumb/free-tailwind-css-3d-icon-download-in-png-blend-fbx-gltf-file-formats--open-source-framework-code-logos-and-brands-pack-icons-9325303.png?f=webp"
+                                                        alt="Tailwind" class="size-full object-cover">
+                                                </div>
+                                            </div>
+                                            <div class="grid shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                                                <div class="h-20 w-20 overflow-hidden rounded-lg">
+                                                    <img src="https://cdn3d.iconscout.com/3d/free/thumb/free-github-3d-logo-download-in-png-blend-fbx-gltf-file-formats--social-media-company-pack-brand-logos-4642720.png?f=webp"
+                                                        alt="Github" class="size-full object-cover">
+                                                </div>
+                                                <div class="h-20 w-20 overflow-hidden rounded-lg">
+                                                    <img src="https://cdn3d.iconscout.com/3d/free/thumb/free-bootstrap-framework-3d-icon-download-in-png-blend-fbx-gltf-file-formats--logo-dart-mobile-developer-programming-language-pack-logos-icons-5453031.png?f=webp"
+                                                        alt="Bootstrap" class="size-full object-cover">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <a href="#Projects"
+                                    class="inline-block animate- rounded-md border-2 px-8 py-3 text-center font-medium text-gray-950 hover:border-black  bg-gradient-to-r from-regal-blue to-purple-400  hover:opacity-80">My
+                                    Work</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service section page  -->
+            <div class="py-8 px-4 mx-auto max-w-screen-xl sm:pb-16 lg:pt-0 lg:px-6">
+                <div class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0 cursor-pointer">
+                    <div
+                        class="flex flex-col place-items-center text-center shadow-2xl border-slate-600 border-1 p-5 rounded-lg transition hover:scale-110">
+                        <div
+                            class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
+
+                            <img src="https://cdn3d.iconscout.com/3d/premium/thumb/web-design-3d-icon-download-in-png-blend-fbx-gltf-file-formats--layout-template-website-development-digitalisation-pack-future-technology-icons-7374550.png"
+                                alt="img">
+                        </div>
+                        <h3 class="mb-2 text-xl font-bold dark:text-white">Web Design</h3>
+                        <p class="text-gray-500 dark:text-gray-400">Great web design without functionality is like a
+                            sports car with no engine.</p>
+                    </div>
+                    <div
+                        class="flex flex-col place-items-center text-center border-slate-600 shadow-2xl border-1 p-5 rounded-lg transition hover:scale-110">
+                        <div
+                            class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
+
+                            <img src="https://cdn3d.iconscout.com/3d/premium/thumb/web-hosting-3d-icon-download-in-png-blend-fbx-gltf-file-formats--server-database-network-and-internet-pack-crime-security-icons-7451348.png"
+                                alt="img">
+                        </div>
+                        <h3 class="mb-2 text-xl font-bold dark:text-white">Web Hosting</h3>
+                        <p class="text-gray-500 dark:text-gray-400">A website's success depends on the reliability and
+                            functionality of their hosting service.</p>
+                    </div>
+                    <div
+                        class="flex flex-col place-items-center text-center border-slate-600 shadow-2xl border-1 p-5 rounded-lg transition hover:scale-110">
+                        <div class=" mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
+                            <img src="https://cdn3d.iconscout.com/3d/premium/thumb/responsive-design-mode-3d-icon-download-in-png-blend-fbx-gltf-file-formats--app-web-mobile-development-pack-icons-7525159.png?f=webp"
+                                alt="img">
+                        </div>
+                        <h3 class="mb-2 text-xl font-bold dark:text-white">Responsive Design</h3>
+                        <p class="text-gray-500 dark:text-gray-400">Responsive Web Design always plays important role
+                            whenever going to promote your website.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills section  -->
+
+        <section id="Skills" class="h-full flex flex-col justify-center items-center py-10 pb-10 dark:bg-gray-900">
+            <div class="my-12">
+                <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">My Skills</h2>
+            </div>
+            <div class="w-full flex flex-col md:flex-row lg:w-4/5">
+                <div class="w-full px-6">
+                    <h2 class="mb-4 text-xl lg:text-3xl tracking-tight font-extrabold text-gray-900 dark:text-white">My
+                        creative skills & experiences:</h2>
+                    <p class="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">As a dedicated frontend
+                        developer, I bring a blend of technical proficiency and creative problem-solving to every
+                        project. My goal is to create visually appealing and highly functional web applications that
+                        provide exceptional user experiences. Here's a closer look at my core skills and expertise.</p>
+
+                    <a href="#"
+                        class="inline-flex items-center justify-center px-3 py-2 mr-3 text-base font-medium text-center ring-orange-50 text-gray-900 hover:text-gray-700 dark:text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
+                        Read More
+                        <svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- progress Section  -->
+                <div class="w-full px-6 pb-10">
+                    <div class="flex justify-between mb-1">
+                        <span class="text-base font-medium text-gray-700 dark:text-white">HTML</span>
+                        <span class="text-sm font-medium text-gray-700 dark:text-white">90%</span>
+                    </div>
+                    <div class="w-full bg-gray-50 rounded-full h-2.5 dark:bg-gray-700">
+                        <div class="bg-blue-600 h-2.5 rounded-full" style="width: 90%"></div>
+                    </div>
+
+                    <div class="flex justify-between mb-1">
+                        <span class="text-base font-medium text-gray-700 dark:text-white">CSS</span>
+                        <span class="text-sm font-medium text-gray-700 dark:text-white">80%</span>
+                    </div>
+                    <div class="w-full bg-gray-50 rounded-full h-2.5 dark:bg-gray-700">
+                        <div class="bg-blue-600 h-2.5 rounded-full" style="width: 80%"></div>
+                    </div>
+
+                    <div class="flex justify-between mb-1">
+                        <span class="text-base font-medium text-gray-700 dark:text-white">Tailwind</span>
+                        <span class="text-sm font-medium text-gray-700 dark:text-white">70%</span>
+                    </div>
+                    <div class="w-full bg-gray-50 rounded-full h-2.5 dark:bg-gray-700">
+                        <div class="bg-blue-600 h-2.5 rounded-full" style="width: 70%"></div>
+                    </div>
+
+                    <div class="flex justify-between mb-1">
+                        <span class="text-base font-medium text-gray-700 dark:text-white">JavaScript</span>
+                        <span class="text-sm font-medium text-gray-700 dark:text-white">50%</span>
+                    </div>
+                    <div class="w-full bg-gray-50 rounded-full h-2.5 dark:bg-gray-700">
+                        <div class="bg-blue-600 h-2.5 rounded-full" style="width: 50%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tools section page  -->
+            <section class="p-6 mt-14 bg-gray-100 text-gray-900 dark:text-white dark:bg-gray-900">
+                <div class="container p-4 mx-auto text-center">
+                    <h2 class="text-4xl font-bold">Tools</h2>
+                </div>
+                <div class="container flex flex-wrap justify-center mx-auto text-gray-400 dark:text-gray-600">
+                    <div class="flex justify-center w-1/2 p-6 align-middle md:w-1/3 xl:w-1/4">
+                        <img class=" drop-shadow-2xl"
+                            src="https://cdn3d.iconscout.com/3d/free/thumb/free-visual-studio-3d-logo-download-in-png-blend-fbx-gltf-file-formats--technology-software-social-media-pack-logos-4642741.png?f=webp"
+                            alt=" VS Code">
+                    </div>
+                    <div class="flex justify-center w-1/2 p-6 align-middle md:w-1/3 xl:w-1/4">
+                        <img src="https://cdn3d.iconscout.com/3d/free/thumb/free-figma-3d-logo-download-in-png-blend-fbx-gltf-file-formats--software-social-media-technology-pack-company-brand-logos-4642727.png"
+                            alt="Figma">
+                    </div>
+                    <div class="flex justify-center w-1/2 p-6 align-middle md:w-1/3 xl:w-1/4">
+                        <img src="https://cdn3d.iconscout.com/3d/free/thumb/free-github-3d-logo-download-in-png-blend-fbx-gltf-file-formats--social-media-company-pack-brand-logos-4642720.png?f=webp"
+                            alt="Github">
+                    </div>
+                    <div class="flex justify-center w-1/2 p-6 align-middle md:w-1/3 xl:w-1/4">
+                        <img src="https://cdn3d.iconscout.com/3d/free/thumb/free-meta-3d-logo-download-in-png-blend-fbx-gltf-file-formats--social-media-technology-company-pack-logos-4642733.png?f=webp"
+                            alt="Meta">
+                    </div>
+                </div>
+            </section>
+        </section>
+
+
+
+        <!-- Contact section page -->
+        <section id="Contact" class=" dark:bg-gray-900">
+            <div class="py-8 px-4 mx-auto max-w-screen-md">
+                <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white ">
+                    Contact Me
+                </h2>
+                <p class="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">Got a
+                    intrested? Lets connects.</p>
+
+                    <!-- Contact Form  -->
+                <form action="https://getform.io/f/bnlejmvb" method="post" enctype="multipart/form-data" class="space-y-8 border rounded-lg p-5 shadow-xl">
+                    <div>
+                        <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your
+                            name</label>
+                        <input type="text" name="name"
+                            class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                            placeholder="Your good name" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your
+                            email</label>
+                        <input type="email" name="email"
+                            class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                            placeholder="name@gmail.com" required>
+                    </div>
+                    <div>
+                        <label for="subject"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Subject</label>
+                        <input type="text" name="subject"
+                            class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                            placeholder="Let me know how can I help you" required>
+                    </div>
+                    <div class="sm:col-span-2">
+                        <label for="message"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Your
+                            message</label>
+                        <textarea name="message" rows="6"
+                            class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                            placeholder="Write something here..."></textarea>
+                    </div>
+                    <button type="submit"
+                        class="py-3 px-5 text-sm font-medium text-center bg-gradient-to-r from-pink-200 to-purple-300 border border-gray-900 rounded-lg sm:w-fit hover:text-white focus:ring-4 focus:outline-none focus:ring-primary-300 dark:text-gray-800 dark:hover:text-white  dark:focus:ring-slate-700 dark:border-white dark:focus:ring-white-500">Send
+                        message</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer section page  -->
+    <footer class="p-4 bg-white sm:p-6 dark:bg-gray-800">
+        <div class="mx-auto max-w-screen-xl">
+            <div class="md:flex md:justify-between">
+                <div class="mb-6 md:mb-0">
+                    <a href="#Home" class="flex items-center">
+                        <img src="/src/Images/logo.png" class="mr-3 h-8 rounded-full lg:h-10" alt="CodewithDG" />
+                        <span
+                            class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">CodewithDG</span>
+                    </a>
+                </div>
+                <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Lets Talk</h2>
+                        <ul class="text-gray-600 dark:text-gray-400">
+                            <li class="mb-4">
+                                <a href="https://flowbite.com" class="hover:underline">7448121101</a>
+                            </li>
+                            <li>
+                                <a href="https://tailwindcss.com/" class="hover:underline">dipakghige2512@gmai.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow Me</h2>
+                        <ul class="text-gray-600 dark:text-gray-400">
+                            <li class="mb-4">
+                                <a href="https://github.com/Codewith-DG" class="hover:underline ">Github</a>
+                            </li>
+                            <li>
+                                <a href="https://discord.com/channels/@me/1311809535383699541"
+                                    class="hover:underline">Discord</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Tools</h2>
+                        <ul class="text-gray-600 dark:text-gray-400">
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline">Visual Studio</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:underline">Chrome Dev. Tools</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a
+                        href="https://github.com/Codewith-DG" class="hover:underline">CodewithDG</a>. All Rights
+                    Reserved.
+                </span>
+
+                <!-- Social icons  -->
+                <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
+                    <a href="https://www.linkedin.com/in/dipak-ghige/"
+                        class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" arra-hidden="true">
+                            <path
+                                d="M19,3H5C3.895,3,3,3.895,3,5v14c0,1.105,0.895,2,2,2h14c1.105,0,2-0.895,2-2V5C21,3.895,20.105,3,19,3z M7.738,17L7.738,17 c-0.697,0-1.262-0.565-1.262-1.262v-4.477C6.477,10.565,7.042,10,7.738,10h0C8.435,10,9,10.565,9,11.262v4.477 C9,16.435,8.435,17,7.738,17z M7.694,8.717c-0.771,0-1.286-0.514-1.286-1.2s0.514-1.2,1.371-1.2c0.771,0,1.286,0.514,1.286,1.2 S8.551,8.717,7.694,8.717z M16.779,17L16.779,17c-0.674,0-1.221-0.547-1.221-1.221v-2.605c0-1.058-0.651-1.174-0.895-1.174 s-1.058,0.035-1.058,1.174v2.605c0,0.674-0.547,1.221-1.221,1.221h-0.081c-0.674,0-1.221-0.547-1.221-1.221v-4.517 c0-0.697,0.565-1.262,1.262-1.262h0c0.697,0,1.262,0.565,1.262,1.262c0,0,0.282-1.262,2.198-1.262C17.023,10,18,10.977,18,13.174 v2.605C18,16.453,17.453,17,16.779,17z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/dipak_ghige/"
+                        class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd"
+                                d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                        </svg>
+                    </a>
+                    <a href="https://github.com/Codewith-DG"
+                        class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd"
+                                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
